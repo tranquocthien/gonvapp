@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
+.dataResult {
+  border-radius: 5px;
+  width: inherit;
+
+  max-height: 400px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.list-chapter {
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.list-chapter::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  color: black;
+  margin-top: 10px;
+}
+.dataResult .dataItem:first-child {
+  margin-top: 0;
+}
+
+.dataItem p {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.dataResult .dataItem :hover {
+  color: red;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+.author-gradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(65, 65, 75, 1) 28%,
+    rgba(245, 245, 245, 1) 100%
+  );
+  height: 300px;
+  /* position: relative; */
+}
+/* .author-img {
+  position: relative;
+}
+.author-img img {
+  position: absolute;
+  bottom: -100px;
+  left: 50px;
+  z-index: 1;
+  width: 200px;
+  border: 1px solid grey;
+} */
+
+.image-container {
+  position: relative;
+}
+.image-container img {
+  position: absolute;
+  top: -100px;
+  z-index: 1;
+  border: 1px solid grey;
+}
+.search-Input {
+  width: 400px;
+}
+.modal-backdrop.show {
+  z-index: 10;
+}
+.signInComponent:hover {
+  cursor: pointer;
+  background: #bdc3c7;
+  border-radius: 0.75rem;
+}
+@media screen and (max-width: 560px) {
+  .author-gradient img {
+    bottom: 0;
+    left: 0;
+  }
+  .search-Input {
+    width: 100%;
+  }
+  .dataResult {
+    width: 100%;
+  }
+  .image-container img {
+    width: 50%;
+  }
+}
